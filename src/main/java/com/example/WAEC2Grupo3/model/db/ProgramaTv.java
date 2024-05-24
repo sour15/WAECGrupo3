@@ -18,5 +18,5 @@ public class ProgramaTv {
 
     @ManyToOne
     @JoinColumn(name = "idpersonaje", insertable = false,updatable = false)
-    private Rol rol;
+    private Personaje personaje;
 }

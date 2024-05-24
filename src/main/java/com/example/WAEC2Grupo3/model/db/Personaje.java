@@ -1,9 +1,11 @@
 package com.example.WAEC2Grupo3.model.db;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table(name = "personaje")
@@ -16,4 +18,7 @@ public class Personaje {
     private String apepersonaje;
     private LocalDate fechnacpersonaje;
 
+    @JsonIgnore
+    @OneToMany(mappedBy = "personaje")
+    private List<ProgramaTv> list;
 }

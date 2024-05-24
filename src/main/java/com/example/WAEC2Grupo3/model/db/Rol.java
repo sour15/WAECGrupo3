@@ -1,5 +1,6 @@
 package com.example.WAEC2Grupo3.model.db;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -13,6 +14,5 @@ public class Rol {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer idrol;
     private String nomrol;
-    @OneToMany(mappedBy = "rol")
-    private List<ProgramaTv> list;
+
 }
